@@ -62,7 +62,7 @@ public class AddressBookServiceTest {
     Response response2 = client.target("http://localhost:8282/contacts")
             .request().get();
     assertEquals(response.getStatus(), response2.getStatus());
-    assertEquals(0, response.readEntity(AddressBook.class).getPersonList()
+    assertEquals(0, response2.readEntity(AddressBook.class).getPersonList()
             .size());
   }
 
